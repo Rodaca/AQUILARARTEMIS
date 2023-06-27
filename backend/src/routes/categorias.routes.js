@@ -15,6 +15,7 @@ const router = Router();
 
 /* Ruta GET para obtener todas las categorías. */
 router.get("/", categoriaController.getCategorias);
+router.post("/", categoriaController.addCategories);
 
 /*Exporta por defecto el router, que contiene todas las rutas relacionadas con las categorías. */
 export default router;

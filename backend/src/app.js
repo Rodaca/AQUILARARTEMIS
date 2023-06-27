@@ -19,6 +19,9 @@ const app = express();
 /*Configura el puerto en el cual se ejecutará la aplicación.*/
 app.set('port', 5000);
 
+/* Middleware */
+app.use(express.json());
+
 /*Middleware para manejar las rutas relacionadas con las categorías.
  * Las rutas se manejarán bajo la ruta base "/api/categorias".*/
 app.use("/api/categorias", categoriaRoutes);

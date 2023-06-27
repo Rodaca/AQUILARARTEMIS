@@ -4,6 +4,7 @@ import { methodsHTTP as constructoraController } from "../controllers/constructo
 const router = Router();
 
 /* 3 se crea la respuesta  */
-router.get("/", constructoraController.getConstructoras)
+router.get("/", constructoraController.getConstructoras);
+router.post("/", constructoraController.addConstructoras);
 /*  se esporta por defaul */
 export default router;
