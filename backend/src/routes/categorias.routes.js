@@ -13,7 +13,7 @@ import { methodsHTTP as categoriaController } from "../controllers/categoria.con
  */
 const router = Router();
 
-/* Ruta GET para obtener todas las categorías. */
+/* Ruta para obtener todas las categorías. */
 router.get("/", categoriaController.getCategorias);
 router.post("/", categoriaController.addCategories);
 router.get("/:id", categoriaController.getCategoria);

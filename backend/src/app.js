@@ -1,5 +1,6 @@
 /*Importa el módulo express para crear la aplicación web.*/
 import express from "express";
+import cors from "cors";
 
 /*Importa las rutas relacionadas con las categorías desde el archivo "./routes/categorias.routes.js".*/
 import categoriaRoutes from "./routes/categorias.routes.js";
@@ -18,7 +19,12 @@ const app = express();
 
 /*Configura el puerto en el cual se ejecutará la aplicación.*/
 app.set('port', 5000);
+/* Uso del cors para aceder desde otros lados */
 
+const confCors={
+    methods:['GET','POST','PUT','DELETE']
+}
+app.use(cors(confCors));
 /* Middleware */
 app.use(express.json());
 

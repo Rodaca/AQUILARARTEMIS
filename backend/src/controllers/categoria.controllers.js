@@ -14,8 +14,8 @@ const getCategorias = async (req, res) => {
 };
 const addCategories  = async (req, res) => {
   try {
-    const {CategoriaNombre,Descripcion,Imagen}=req.body;
-    const category={CategoriaNombre,Descripcion,Imagen};
+    const {nombre_categoria,descripcion_categoria,img_categoria}=req.body;
+    const category={nombre_categoria,descripcion_categoria,img_categoria};
     const connection = await getConnection();
     const result =await connection.query("INSERT INTO categorias SET ?",category)
     res.json(result)
